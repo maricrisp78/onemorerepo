@@ -15,9 +15,18 @@ module.exports = function (grunt) {
 
   // Automatically load required grunt tasks
   require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin', 
-    buildcontrol: 'grunt-build-control'
+    useminPrepare: 'grunt-usemin'
   });
+
+
+
+  // Automatically load required grunt tasks
+require('jit-grunt')(grunt, {
+  useminPrepare: 'grunt-usemin',
+  buildcontrol: 'grunt-build-control'
+});
+
+
 
   // Configurable paths
   var config = {
@@ -33,6 +42,8 @@ module.exports = function (grunt) {
 
 
 
+// Project settings
+    config: config,
 
     buildcontrol: {
       options: {
@@ -43,19 +54,23 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:your_github_user/your_webapp.git',
+          remote: 'git@github.com:maricrisp78/onemorerepo.git',
           branch: 'gh-pages'
         }
       }
     },
+
+    // Watches files for changes and runs tasks based on the changed files
+    watch: {
+
+    ... more code ...
+
 
 
 
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-
-
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
