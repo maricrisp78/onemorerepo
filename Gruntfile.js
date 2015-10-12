@@ -15,18 +15,9 @@ module.exports = function (grunt) {
 
   // Automatically load required grunt tasks
   require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin'
+    useminPrepare: 'grunt-usemin', 
+    buildcontrol: 'grunt-build-control'
   });
-
-
-
-  // Automatically load required grunt tasks
-require('jit-grunt')(grunt, {
-  useminPrepare: 'grunt-usemin',
-  buildcontrol: 'grunt-build-control'
-});
-
-
 
   // Configurable paths
   var config = {
@@ -42,8 +33,6 @@ require('jit-grunt')(grunt, {
 
 
 
-// Project settings
-    config: config,
 
     buildcontrol: {
       options: {
@@ -60,17 +49,13 @@ require('jit-grunt')(grunt, {
       }
     },
 
-    // Watches files for changes and runs tasks based on the changed files
-    watch: {
-
-    ... more code ...
-
-
 
 
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+
+
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
